@@ -11,16 +11,15 @@ API_ID = int(getenv("API_ID", None))
 API_HASH = getenv("API_HASH", None)
 
 #❖ Add Owner Username without @ 
-OWNER_USERNAME = getenv("OWNER_USERNAME", "roy_editx")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "def_shubho")
 
 #❖  Get Your bot username
-BOT_USERNAME = getenv("BOT_USERNAME", "AvishaxBot")
+BOT_USERNAME = getenv("BOT_USERNAME", "SohiniMusicBot")
 
 #❖  Don't Add style font 
-BOT_NAME = getenv("BOT_NAME", "AVISHA MUSIC")
-
+BOT_NAME = getenv("BOT_NAME", "SOHINI MUSIC")
 #❖ get Your Assistant User name
-ASSUSERNAME = getenv("ASSUSERNAME", "AVISHA_ASS")
+ASSUSERNAME = getenv("ASSUSERNAME", "SOHINI_ASS")
 
 #❖ Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
@@ -34,7 +33,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600000))
 LOGGER_ID = int(getenv("LOGGER_ID", "-1001929735324"))
 
 #❖ Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "6922271843"))
+OWNER_ID = int(getenv("OWNER_ID", "7041241731"))
 
 #❖  Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
@@ -53,8 +52,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  #❖ Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/roy_editx")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/the_friendz")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/TheBongFamily_Chatt")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+tON_4CL8GYNkOGY1")
 
 #❖ Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -128,4 +127,4 @@ if SUPPORT_CHAT:
     if not re.match("(?:http|https)://", SUPPORT_CHAT):
         raise SystemExit(
             "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
-        )
+)
