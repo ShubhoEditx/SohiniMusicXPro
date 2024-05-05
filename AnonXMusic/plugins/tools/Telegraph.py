@@ -20,7 +20,7 @@ def ul(_, message):
         for x in fk:
             url = "https://telegra.ph" + x
 
-        i.edit(f'❖ ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴘʜ ᴜʀʟ ɪs ʀᴇᴀᴅʏ ʙᴀʙʏ ➥ {url}\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ɴ ʏ ᴋ ᴀ ᴀ ࿐' , reply_markup=InlineKeyboardMarkup(EVAA),)
+        i.edit(f'❖ ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴘʜ ᴜʀʟ ɪs ʀᴇᴀᴅʏ ʙᴀʙʏ ➥ {url}\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪' , reply_markup=InlineKeyboardMarkup(EVAA),)
 
 ########____________________________________________________________######
 
@@ -34,5 +34,5 @@ def ul(_, message):
         for x in fk:
             url = "https://graph.org" + x
 
-        i.edit(f'❖ ʏᴏᴜʀ ɢʀᴀᴘʜ ᴜʀʟ ɪs ʀᴇᴀᴅʏ ʙᴀʙʏ ➥ `{url}`\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ɴ ʏ ᴋ ᴀ ᴀ ࿐' , reply_markup=InlineKeyboardMarkup(EVAA),)
+        i.edit(f'❖ ʏᴏᴜʀ ɢʀᴀᴘʜ ᴜʀʟ ɪs ʀᴇᴀᴅʏ ʙᴀʙʏ ➥ `{url}`\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪' , reply_markup=InlineKeyboardMarkup(EVAA),)
       
