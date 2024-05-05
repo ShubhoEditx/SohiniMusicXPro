@@ -6,9 +6,9 @@ from config import BOT_USERNAME
 start_txt = """
 ❖ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ.
 
-● ɪ ᴀᴍ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐ ᴍᴜsɪᴄ ʙᴏᴛ.
+● ɪ ᴀᴍ ➥ 𝐒ᴏʜɪɴɪ ♡ ᴍᴜsɪᴄ ʙᴏᴛ.
 
-❖ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐ ᴍᴜsɪᴄ ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.
+❖ ɪғ ʏᴏᴜ ᴡᴀɴᴛ 𝐒ᴏʜɪɴɪ ♡ ᴍᴜsɪᴄ ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.
 """
 
 
@@ -18,7 +18,7 @@ start_txt = """
 async def start(_, msg):
     buttons = [
         [
-          InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/the_friendz"),
+          InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/TheBongFamily_Chatt"),
           InlineKeyboardButton("ʀᴇᴘᴏ", url="https://github.com/LOCO-PILOT/ABC")
           ],
     ]
@@ -30,4 +30,4 @@ async def start(_, msg):
         caption=start_txt,
         reply_markup=reply_markup
     )
-  
+
