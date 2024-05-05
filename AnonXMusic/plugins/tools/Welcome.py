@@ -11,7 +11,7 @@ from AnonXMusic import app
 from AnonXMusic.CuteDb.Weldb import *
 from config import LOGGER_ID
 
-LOGGER = getLogger(__name__)
+LOGGER = getLogger(name)
 
 
 class temp:
@@ -57,7 +57,7 @@ def welcomepic(pic, user, chat, id, uname):
 HUHU = """**
 @app.on_message(filters.command("swel") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**❖ ᴜsᴀɢᴇ ➥** /swel [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
+    usage = "❖ ᴜsᴀɢᴇ ➥ /swel [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -110,7 +110,7 @@ async def greet_group(_, member: ChatMemberUpdated):
     if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
         try:
             await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
-        except Exception as e:
+            except Exception as e:
             LOGGER.error(e)
     try:
         welcomeimg = welcomepic(
@@ -119,19 +119,7 @@ async def greet_group(_, member: ChatMemberUpdated):
         temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
             member.chat.id,
             photo=welcomeimg,
-            caption= f"""
-  
-    🕊️❤️𝐖ᴇʟᴄᴏᴍᴇ 𝐁ᴀɴʏ❤️🕊️
-    ╭───── • ◆ • ─────╮
-    
-● 𝐍ᴀᴍᴇ ➥  {user.mention}
-● 𝐔sᴇʀɴᴀᴍᴇ ➥  @{user.username}
-● 𝐔sᴇʀ ɪᴅ ➥  {user.id}
-
-𑁍 𝐏ᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪
-
-    ╰───── • ◆ • ─────╯"""
-,reply markup=InlineKeyboardMarkup(
+            caption= f"🕊️❤️𝐖ᴇʟᴄᴏᴍᴇ 𝐁ᴀɴʏ❤️🕊️\n    ╭───── • ◆ • ─────╮    \n\n● 𝐍ᴀᴍᴇ ➥  {user.mention}\n● 𝐔sᴇʀɴᴀᴍᴇ ➥  @{user.username}\n● 𝐔sᴇʀ ɪᴅ ➥  {user.id}\n\n𑁍 𝐏ᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪\n\n    ╰───── • ◆ • ─────╯", reply markup=InlineKeyboardMarkup(
 [
 [InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/SohiniMusicBot?startgroup=new"),
 ]
@@ -145,6 +133,3 @@ async def greet_group(_, member: ChatMemberUpdated):
         os.remove(f"downloads/pp{user.id}.png")
     except Exception as e:
         pass
-
-
-  
