@@ -130,7 +130,7 @@ async def greet_group(_, member: ChatMemberUpdated):
 
 𑁍 𝐏ᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪
 
-    ╰───── • ◆ • ─────╯"
+    ╰───── • ◆ • ─────╯"""
 reply_markup=InlineKeyboardMarkup(
 [
 [InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/SohiniMusicBot?startgroup=new"),
