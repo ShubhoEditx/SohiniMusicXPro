@@ -41,7 +41,7 @@ def welcomepic(pic, user, chat, id, uname):
         (605, 605)
     ) 
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('AnonXMusic/assets/font.ttf', size=75)
+    font = ImageFont.truetype('AnonXMusic/assets/font.ttf', size=65)
     font2 = ImageFont.truetype('AnonXMusic/assets/font.ttf', size=90)
     draw.text((150, 450), f'NAME : {unidecode(user)}', fill="black", font=font)
     draw.text((150, 550), f'ID : {id}', fill="black", font=font)
@@ -120,20 +120,19 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption= f"""
-**❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅**
+ㅤㅤㅤ◦•●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•◦
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 
-▰▰▰▰▰▰▰▰▰▰▰▰▰
-**➻ ɴᴀᴍᴇ »** {user.mention}
-**➻ ɪᴅ »** `{user.id}`
-**➻ ᴜ_ɴᴀᴍᴇ »** @{user.username}
-**➻ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs »** {count}
-▰▰▰▰▰▰▰▰▰▰▰▰▰
+● ɴᴀᴍᴇ ➥  {user.mention}
+● ᴜsᴇʀɴᴀᴍᴇ ➥  @{user.username}
+● ᴜsᴇʀ ɪᴅ ➥  {user.id}
 
-**❅─────✧❅✦❅✧─────❅**
+❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
-     reply_markup=InlineKeyboardMarkup(
+reply_markup=InlineKeyboardMarkup(
 [
-[InlineKeyboardButton(f"𝐊ɪᴅɴᴀᴘ 𝐌𝐞", url=f"https://t.me/SohiniMusicBot?startgroup=new"),
+[InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/sohinimusicBot?startgroup=new"),
 ]
 ]
 ))
@@ -145,7 +144,6 @@ async def greet_group(_, member: ChatMemberUpdated):
         os.remove(f"downloads/pp{user.id}.png")
     except Exception as e:
         pass
-
 
 
     
