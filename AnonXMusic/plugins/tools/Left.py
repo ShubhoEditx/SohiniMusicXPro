@@ -1,16 +1,11 @@
-from AnonXMusic import app
+from DAXXMUSIC import app
 from pyrogram import Client, filters
 from pyrogram.errors import RPCError
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
 from os import environ
 from typing import Union, Optional
 from PIL import Image, ImageDraw, ImageFont
-
-EVAA = [
-    [
-        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/avishaxbot?startgroup=true"),
-    ],
-]
+import asyncio
 
 # --------------------------------------------------------------------------------- #
 
@@ -39,24 +34,30 @@ async def get_userinfo_img(
 
         circular_img = Image.new("RGBA", img.size, (0, 0, 0, 0))
         circular_img.paste(img, (0, 0), mask)
-        resized = circular_img.resize((286, 286))
-        bg.paste(resized, (297, 117), resized)
-
+        resized = circular_img.resize((400, 400))
+        bg.paste(resized, (440, 160), resized)
 
     img_draw = ImageDraw.Draw(bg)
+
+    img_draw.text(
+        (529, 627),
+        text=str(user_id).upper(),
+        font=get_font(46, font_path),
+        fill=(255, 255, 255),
+    )
 
     path = f"./userinfo_img_{user_id}.png"
     bg.save(path)
     return path
 
+# --------------------------------------------------------------------------------- #
+
+bg_path = "DAXXMUSIC/assets/userinfo.png"
+font_path = "DAXXMUSIC/assets/hiroko.ttf"
 
 # --------------------------------------------------------------------------------- #
 
-bg_path = "AnonXMusic/assets/CUTELEF.jpg"
-font_path = "AnonXMusic/assets/SwanseaBold-D0ox.ttf"
-
-# --------------------------------------------------------------------------------- #
-
+# -------------
 
 @app.on_chat_member_updated(filters.group, group=20)
 async def member_has_left(client: app, member: ChatMemberUpdated):
@@ -90,18 +91,36 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
                 user_id=user.id,
                 profile_path=photo,
             )
+        
+            caption = f"**#New_Member_Left**\n\n**๏** {user.mention} **ʜᴀs ʟᴇғᴛ ᴛʜɪs ɢʀᴏᴜᴘ**\n**๏ sᴇᴇ ʏᴏᴜ sᴏᴏɴ ᴀɢᴀɪɴ..!**"
+            button_text = "๏ ᴠɪᴇᴡ ᴜsᴇʀ ๏"
 
-            caption = f"ㅤㅤ  ㅤ◦🕊️❤️𝐔sᴇʀ 𝐋ᴇғᴛ❤️🕊️◦\n╭───── • ◆ • ─────╮\n\n❖ ᴀ ᴍᴇᴍʙᴇʀ ʟᴇғᴛ ғʀᴏᴍ ɢʀᴏᴜᴘ.\n\n● ɢʀᴏᴜᴘ ➥ {member.chat.title}\n● ᴜsᴇʀ ɴᴀᴍᴇ ➥ {user.mention}\n● sᴇᴇ ʏᴏᴜ sᴏᴏɴ ᴀɢᴀɪɴ, ʙᴀʙʏ.\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪\n╰───── • ◆ • ─────╯"
+            # Generate a deep link to open the user's profile
+            deep_link = f"tg://openmessage?user_id={user.id}"
+
             # Send the message with the photo, caption, and button
-            await client.send_photo(
+            message = await client.send_photo(
                 chat_id=member.chat.id,
                 photo=welcome_photo,
                 caption=caption,
-                reply_markup=InlineKeyboardMarkup(EVAA),)
+                reply_markup=InlineKeyboardMarkup([
+                    [InlineKeyboardButton(button_text, url=deep_link)]
+                ])
+            )
+
+            # Schedule a task to delete the message after 30 seconds
+            async def delete_message():
+                await asyncio.sleep(30)
+                await message.delete()
+
+            # Run the task
+            asyncio.create_task(delete_message())
+            
         except RPCError as e:
             print(e)
             return
     else:
         # Handle the case where the user has no profile photo
-        print(f"❖ User {user.id} has no profile photo.")
-  
+        print(f"User {user.id} has no profile photo.")
+
+        
