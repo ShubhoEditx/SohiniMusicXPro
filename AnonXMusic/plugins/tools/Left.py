@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 EVAA = [
     [
-        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/avishaxbot?startgroup=true"),
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/sohinimusicbot?startgroup=true"),
     ],
 ]
 
@@ -91,7 +91,8 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
                 profile_path=photo,
             )
 
-            caption = f" 🕊️❤️𝐔sᴇʀ 𝐋ᴇғᴛ❤️🕊️◦\n╭───── • ◆ • ─────╮\n\n❖ ᴀ ᴍᴇᴍʙᴇʀ ʟᴇғᴛ ғʀᴏᴍ ɢʀᴏᴜᴘ.\n\n● ɢʀᴏᴜᴘ ➥ {member.chat.title}\n● ᴜsᴇʀ ɴᴀᴍᴇ ➥ {user.mention}\n● sᴇᴇ ʏᴏᴜ sᴏᴏɴ ᴀɢᴀɪɴ, ʙᴀʙʏ.\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪\n╰───── • ◆ • ─────╯"
+            caption = f"  🕊️❤️𝐔sᴇʀ 𝐋ᴇғᴛ❤️🕊️◦\n╭───── • ◆ • ─────╮\n\n❖ ᴀ ᴍᴇᴍʙᴇʀ ʟᴇғᴛ ғʀᴏᴍ ɢʀᴏᴜᴘ.\n\n● ɢʀᴏᴜᴘ ➥ {member.chat.title}\n● ᴜsᴇʀ ɴᴀᴍᴇ ➥ {user.mention}\n● sᴇᴇ ʏᴏᴜ sᴏᴏɴ ᴀɢᴀɪɴ, ʙᴀʙʏ.\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ 𓆩 𝐒 𝐇 𝐔 𝐁 𝐇 𝐎 𓆪\n╰───── • ◆ • ─────╯
+            "
             
             # Send the message with the photo, caption, and button
             await client.send_photo(
