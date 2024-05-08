@@ -19,14 +19,14 @@ async def start(_, msg):
     buttons = [
         [
           InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/TheBongFamily_Chatt"),
-          InlineKeyboardButton("ʀᴇᴘᴏ", url="https://github.com/LOCO-PILOT/ABC")
+          InlineKeyboardButton("ʀᴇᴘᴏ", url="https://github.com/ShubhoEditx/SohiniMusicXPro")
           ],
     ]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
-        photo="https://telegra.ph/file/81b0c59e3b222bcc2a435.jpg",
+        photo="https://telegra.ph/file/245f55c3ae09d24bcebdc.jpg",
         caption=start_txt,
         reply_markup=reply_markup
     )
