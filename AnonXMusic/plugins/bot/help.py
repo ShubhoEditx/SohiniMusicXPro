@@ -21,10 +21,6 @@ AVISHA = [
 "https://telegra.ph/file/cc549b32302864d354e22.jpg",
 "https://telegra.ph/file/63af9fafd500da9726aa9.jpg",
 "https://telegra.ph/file/1d90f054686f8d4f494a3.jpg",
-"https://telegra.ph/file/49a28e53b8b801c847c25.jpg",
-"https://telegra.ph/file/980418b2d0624b06ea194.jpg",
-"https://telegra.ph/file/f1c7f6baf3a5ee4a60c82.jpg",
-"https://telegra.ph/file/1b5c9fbf2498efb99e3c5.jpg",
 ]
 
 
