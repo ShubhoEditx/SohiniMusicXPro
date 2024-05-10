@@ -99,6 +99,7 @@ def stream_markup(_, chat_id):
                 url=f"https://t.me/the_friendz",
             ),
         ],
+        [InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/def_shubho")],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
