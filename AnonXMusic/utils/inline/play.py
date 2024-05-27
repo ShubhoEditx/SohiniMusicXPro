@@ -75,7 +75,7 @@ def stream_markup_timer(_, chat_id, played, dur):
                 url=f"https://t.me/About_Sohini",
             ),
         ],
-        [InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/def_shubho")],
+        [InlineKeyboardButton(text="𝐒ᴜᴘᴘᴏʀᴛ ♡", url=f"https://t.me/def_shubho")],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
@@ -99,7 +99,7 @@ def stream_markup(_, chat_id):
                 url=f"https://t.me/about_sohini",
             ),
         ],
-        [InlineKeyboardButton(text="🌱𝐒ᴜᴘᴘᴏʀᴛ⛈️", url=f"https://t.me/BongFamilyWaitingArea")],
+        [InlineKeyboardButton(text="𝐒ᴜᴘᴘᴏʀᴛ ♡", url=f"https://t.me/BongFamilyWaitingArea")],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
